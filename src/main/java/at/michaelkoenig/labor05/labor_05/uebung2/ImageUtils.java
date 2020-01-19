@@ -5,7 +5,6 @@
  */
 package at.michaelkoenig.labor05.labor_05.uebung2;
 
-import at.michaelkoenig.labor05.labor_05.uebung1.Binomialkoeffizient;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -105,7 +104,7 @@ public class ImageUtils {
             Instant start = Instant.now();
 
             ForkJoinPool pool = new ForkJoinPool(parallelism);
-            pool.invoke(new ErusionAction(original, wr, 0, k));
+            pool.invoke(new ErosionAction(original, wr, 0, k));
             pool.shutdown();
 
             Instant stop = Instant.now();
